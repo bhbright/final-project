@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Ball Run Portfolio | Contact</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="school.html">School</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Intro Section -->
+        <section aria-labelledby="contact-intro">
+            <h2 id="contact-intro">Get in Touch</h2>
+            <p>If you’d like to reach out, please fill out the form below or connect with me on social media!</p>
+        </section>
+
+        <!-- Contact Form -->
+        <section aria-labelledby="contact-form">
+            <h3 id="contact-form">Contact Form</h3>
+            <form id="contact-form-el">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="from_name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="reply_to" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" id="submit-btn">Send Message</button>
+            </form>
+            <p id="status-message" style="margin-top:10px; font-weight: bold;"></p>
+        </section>
+
+        <!-- Social Links -->
+        <section aria-labelledby="social-links">
+            <h3 id="social-links">Connect with Me</h3>
+            <ul>
+                <li><a href="https://github.com/bhbright" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://youtube.com/@BhBright" target="_blank" rel="noopener">YouTube</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Steel Ball Run Portfolio | Designed by Konner Glandon</p>
+    </footer>
+
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // 🔹 Replace this with your EmailJS public key
+            emailjs.init("lDEI1zdU77_L0IVfI");
+        })();
+
+        const form = document.getElementById("contact-form-el");
+        const status = document.getElementById("status-message");
+        const button = document.getElementById("submit-btn");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            status.textContent = "⏳ Sending message...";
+            button.disabled = true;
+
+            // 🔹 Replace the next two with your EmailJS IDs
+            const serviceID = "service_6f4xthm";
+            const templateID = "template_tzeqgrk";
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    status.textContent = "✅ Message sent successfully!";
+                    form.reset();
+                })
+                .catch((error) => {
+                    console.error("EmailJS error:", error);
+                    status.textContent = "❌ Failed to send message. Please try again.";
+                })
+                .finally(() => {
+                    button.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html>
