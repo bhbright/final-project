@@ -1,0 +1,36 @@
+/* Layout-only CSS for homepage */
+body {
+    margin: 0;
+}
+
+header, footer {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main.layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "hero sidebar"
+        "features sidebar";
+}
+
+.hero {
+    grid-area: hero;
+}
+
+.features {
+    grid-area: features;
+    display: flex;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
