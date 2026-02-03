@@ -1,9 +1,7 @@
-// Select the hamburger button and the nav menu
+// Hamburger menu toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-// Add click event listener
-navToggle.addEventListener('click', function() {
-  // Toggle the 'active' class
+navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
