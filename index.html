@@ -11,11 +11,15 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="nav-container">
+                <a href="#" class="logo">MyWebsite</a>
+                <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -23,7 +27,6 @@
         <section class="hero">
             <h1>Homepage Title</h1>
             <p>Introductory content goes here.</p>
-            <!-- Homepage hero image removed -->
         </section>
 
         <section class="features">
@@ -47,12 +50,13 @@
         <aside class="sidebar">
             <h2>Sidebar</h2>
             <p>Refer to the "Products" page to find out more information about these limited edition figurines!</p>
-            <!-- Sidebar image removed -->
         </aside>
     </main>
 
     <footer>
         <p>&copy; 2026 Website</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
