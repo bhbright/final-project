@@ -1,68 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Product</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
 <header>
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">MyWebsite</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav>
+<div class="nav-container">
+<a href="#" class="logo">MyWebsite</a>
+<button class="nav-toggle">&#9776;</button>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="product.html">Product</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</nav>
 </header>
 
 <main class="layout">
-    <section>
-        <h1>Products</h1>
 
-        <img src="images/product-banner.jpg" alt="Selection of products displayed on a table" class="feature-img">
+<section>
+<h1>Products</h1>
 
-        <section>
-            <h2>Product List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Product A</td>
-                        <td>Short description</td>
-                        <td>$10</td>
-                    </tr>
-                    <tr>
-                        <td>Product B</td>
-                        <td>Short description</td>
-                        <td>$20</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </section>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="images/feature1.webp" alt="Product A" class="table-img"></td>
+<td>Product A</td>
+<td>Limited Edition Asuka Figurine</td>
+<td>$10</td>
+</tr>
+<tr>
+<td><img src="images/feature2.webp" alt="Product B" class="table-img"></td>
+<td>Product B</td>
+<td>Limited Edition Asuna Yuuki Figurine</td>
+<td>$20</td>
+</tr>
+<tr>
+<td><img src="images/feature3.webp" alt="Product C" class="table-img"></td>
+<td>Product C</td>
+<td>Limited Edition Alya Figurine</td>
+<td>$30</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-    <aside class="sidebar">
-        <h2>Sidebar</h2>
-        <p>Check out all the other products for more limited edition figurines!</p>
-    </aside>
+</section>
+
+<aside class="sidebar">
+<h2>Sidebar</h2>
+<p>Check out all the limited edition figurines!</p>
+</aside>
+
 </main>
 
 <footer>
-    <p>&copy; 2026 Website</p>
+<p>&copy; 2026 Website</p>
 </footer>
 
 <script src="js/script.js"></script>
